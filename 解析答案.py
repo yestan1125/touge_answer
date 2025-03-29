@@ -87,13 +87,13 @@ def process_questions(data):
 def main():
     """主函数"""
     try:
-        with open('C:\Code\markdown\data.json', 'r', encoding='utf-8') as f:
+        with open('改为你json文件的地址', 'r', encoding='utf-8') as f:
             data = json.load(f)
     except FileNotFoundError:
-        print("错误：找不到data.json文件")
+        print("错误：找不到json文件")
         return
     except json.JSONDecodeError:
-        print("错误：JSON文件格式不正确")
+        print("错误：json文件格式不正确")
         return
 
     # 处理题目并生成结果
@@ -101,7 +101,7 @@ def main():
 
     # 输出到文件和控制台
     try:
-        with open('C:\Code\Python\T6.md', 'w', encoding='utf-8') as f:
+        with open('改为你答案想写入的地址', 'w', encoding='utf-8') as f:
             f.write('\n'.join(results))
         print("结果已写入")
     except Exception as e:
